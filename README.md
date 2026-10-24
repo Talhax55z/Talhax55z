@@ -97,9 +97,12 @@ A parking prototype for Pakistani cities that needs no per-bay sensors, built un
 | Project | What it shows |
 |---|---|
 | [**MediBot**](https://github.com/Talhax55z/medibot-rag-chatbot) | RAG medical Q&A over a PDF encyclopedia: LangChain, FAISS, MiniLM embeddings, Groq, Streamlit |
+| [**NYC Airbnb 2024: exploratory analysis**](https://github.com/Talhax55z/Air-BNB-1) | Separate analysis of 20,765 listings: data cleaning, price distributions, room types, availability, and geographic patterns |
 | [**NYC Airbnb: cleaning, EDA & modeling**](https://github.com/Talhax55z/airbnb-nyc-eda-modeling) | Found that price in the dataset is synthetic and caught a leaking feature (`service_fee` is exactly 20% of price); no model beats R² ≈ 0.08 |
 | [**Telco churn prediction**](https://github.com/Talhax55z/telco-churn-prediction) | SMOTEENN applied to the training split only, six models compared on a stratified held-out set (ROC-AUC 0.80–0.83) |
-| [**Data analysis projects**](https://github.com/Talhax55z/data-analysis-projects) | Zomato and Eid sales EDA, plus 10 reusable MySQL views on Ola ride bookings |
+| [**Zomato data analysis**](https://github.com/Talhax55z/zomato-data-analysis) | Restaurant types, ratings, cost for two, and online/offline ordering patterns |
+| [**Eid sales analysis**](https://github.com/Talhax55z/Eid-Sales-Analysis) | Sales exploration by demographics, location, occupation, and product category |
+| [**Ola SQL and analysis index**](https://github.com/Talhax55z/data-analysis-projects) | 10 reusable MySQL views on ride bookings, cancellations, ratings, and revenue |
 
 ---
 
