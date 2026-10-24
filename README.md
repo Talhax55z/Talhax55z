@@ -95,7 +95,7 @@ A parking prototype for Pakistani cities that needs no per-bay sensors, built un
 | Project | What it shows |
 |---|---|
 | [**MediBot**](https://github.com/Talhax55z/medibot-rag-chatbot) | PDF-based RAG with source passages: Groq + Streamlit UI, Hugging Face terminal client, FAISS index, setup guide, and [presentation](https://github.com/Talhax55z/medibot-rag-chatbot/blob/main/medical-chatbot-ppt.pdf) |
-| [**NYC Airbnb 2024: exploratory analysis**](https://github.com/Talhax55z/Air-BNB-1) | Separate analysis of 20,765 listings: data cleaning, price distributions, room types, availability, and geographic patterns |
+| [**NYC Airbnb 2024: exploratory analysis**](https://github.com/Talhax55z/Air-BNB-1) | Separate analysis of 20,770 listings: data cleaning, price distributions, room types, availability, and geographic patterns |
 | [**NYC Airbnb: cleaning, EDA & modeling**](https://github.com/Talhax55z/airbnb-nyc-eda-modeling) | Found that price in the dataset is synthetic and caught a leaking feature (`service_fee` is exactly 20% of price); no model beats R² ≈ 0.08 |
 | [**Telco churn prediction**](https://github.com/Talhax55z/telco-churn-prediction) | SMOTEENN applied to the training split only, six models compared on a stratified held-out set (ROC-AUC 0.80–0.83) |
 | [**Zomato data analysis**](https://github.com/Talhax55z/zomato-data-analysis) | Restaurant types, ratings, cost for two, and online/offline ordering patterns |
