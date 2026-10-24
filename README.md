@@ -17,7 +17,7 @@ I build computer vision and ML systems, and I fix the bugs I run into in the lib
 
 ## Open source
 
-**20 merged PRs** across 5 projects, plus 2 in review.
+**20 merged PRs** across 5 projects, plus 2 open, verified on 24 October 2026. [Browse my contributions](https://github.com/pulls?q=is%3Apr+author%3ATalhax55z).
 
 | Project | Merged | Areas |
 |---|:---:|---|
@@ -38,8 +38,6 @@ I build computer vision and ML systems, and I fix the bugs I run into in the lib
 - **transformers [#49416](https://github.com/huggingface/transformers/pull/49416):** `Inkling-Small` resolved `moe_intermediate_size` to 3072 instead of 2048 because the dense MLP width overwrote the expert width, breaking weight loading.
 
 **In review:** [huggingface/trl #7540](https://github.com/huggingface/trl/pull/7540) (report true epoch progress in `AsyncGRPOTrainer` and `AsyncDistillationTrainer`) · [MONAI #8795](https://github.com/Project-MONAI/MONAI/pull/8795) (package install hint in `ImageWriter` backend errors)
-
-My `euler_from_quaternion` fix was selected as a worked reference for AI coding agents in the public XERJ index.
 
 <details>
 <summary><b>All 20 merged PRs</b></summary>
@@ -96,7 +94,7 @@ A parking prototype for Pakistani cities that needs no per-bay sensors, built un
 
 | Project | What it shows |
 |---|---|
-| [**MediBot**](https://github.com/Talhax55z/medibot-rag-chatbot) | RAG medical Q&A over a PDF encyclopedia: LangChain, FAISS, MiniLM embeddings, Groq, Streamlit |
+| [**MediBot**](https://github.com/Talhax55z/medibot-rag-chatbot) | PDF-based RAG with source passages: Groq + Streamlit UI, Hugging Face terminal client, FAISS index, setup guide, and [presentation](https://github.com/Talhax55z/medibot-rag-chatbot/blob/main/medical-chatbot-ppt.pdf) |
 | [**NYC Airbnb 2024: exploratory analysis**](https://github.com/Talhax55z/Air-BNB-1) | Separate analysis of 20,765 listings: data cleaning, price distributions, room types, availability, and geographic patterns |
 | [**NYC Airbnb: cleaning, EDA & modeling**](https://github.com/Talhax55z/airbnb-nyc-eda-modeling) | Found that price in the dataset is synthetic and caught a leaking feature (`service_fee` is exactly 20% of price); no model beats R² ≈ 0.08 |
 | [**Telco churn prediction**](https://github.com/Talhax55z/telco-churn-prediction) | SMOTEENN applied to the training split only, six models compared on a stratified held-out set (ROC-AUC 0.80–0.83) |
@@ -113,7 +111,7 @@ A parking prototype for Pakistani cities that needs no per-bay sensors, built un
 | **Computer vision** | YOLOv11 (Ultralytics), OpenCV, EasyOCR, PaddleOCR, ONNX, CLAHE, multi-object tracking |
 | **Deep learning** | PyTorch, MONAI, Kornia |
 | **ML & data** | scikit-learn, imbalanced-learn, pandas, NumPy, SciPy, matplotlib, seaborn, Plotly |
-| **LLM / RAG** | LangChain, FAISS, sentence-transformers, Groq, Streamlit |
+| **LLM / RAG** | LangChain, FAISS, sentence-transformers, Groq, Hugging Face, Streamlit |
 | **Web & backend** | Node.js, Express, WebSocket, MongoDB, Next.js, React, Tailwind |
 | **Languages & tools** | Python, JavaScript, SQL (MySQL), C++ (basic), Git, Raspberry Pi, Google Colab, Roboflow |
 
