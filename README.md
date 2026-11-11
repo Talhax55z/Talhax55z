@@ -1,7 +1,7 @@
 <h1 align="center">Muhammad Talha</h1>
 
 <p align="center">
-  Computer vision &amp; ML engineer &nbsp;·&nbsp; <b>20 merged pull requests</b> in Hugging Face, MONAI, Kornia and Roboflow<br>
+  Computer vision &amp; ML engineer &nbsp;·&nbsp; <b>33 merged pull requests</b> in Hugging Face, MONAI, Kornia and Roboflow<br>
   BS Computer Science, AWKUM (2022–2026) &nbsp;·&nbsp; Mardan, Pakistan &nbsp;·&nbsp; <a href="mailto:muhammadtalha223@gmail.com">muhammadtalha223@gmail.com</a>
 </p>
 
@@ -9,7 +9,7 @@
 
 ## About
 
-I build computer vision and ML systems, and I fix the bugs I run into in the libraries underneath them. My thesis was an end-to-end license plate recognition system for Pakistani plates that runs on a Raspberry Pi and is deployed entirely on free-tier services. Most of my open-source work is correctness fixes in PyTorch-ecosystem libraries: numerical edge cases, ONNX export, metric definitions, and security hardening.
+I build computer vision and ML systems, and I fix the bugs I run into in the libraries underneath them. My thesis was an end-to-end license plate recognition system for Pakistani plates that runs on a Raspberry Pi and is deployed entirely on free-tier services. Most of my open-source work is correctness fixes in PyTorch-ecosystem libraries: numerical edge cases, ONNX and `torch.export` compatibility, input validation, metric definitions, and security hardening.
 
 **Currently looking for:** graduate research opportunities (MS/PhD) in computer vision and medical imaging.
 
@@ -17,11 +17,11 @@ I build computer vision and ML systems, and I fix the bugs I run into in the lib
 
 ## Open source
 
-**20 merged PRs** across 5 projects, plus 2 open, verified on 24 October 2026. [Browse my contributions](https://github.com/pulls?q=is%3Apr+author%3ATalhax55z).
+**33 merged PRs** across 5 projects, plus 2 open, verified on 11 November 2026. [Browse my contributions](https://github.com/pulls?q=is%3Apr+author%3ATalhax55z).
 
 | Project | Merged | Areas |
 |---|:---:|---|
-| [kornia/kornia](https://github.com/kornia/kornia/pulls?q=is%3Apr+author%3ATalhax55z+is%3Amerged) | 13 | geometry, filters, augmentation, ONNX export, integer-input numerics |
+| [kornia/kornia](https://github.com/kornia/kornia/pulls?q=is%3Apr+author%3ATalhax55z+is%3Amerged) | 26 | geometry, enhance, feature, filters, augmentation, ONNX / `torch.export`, input validation |
 | [Project-MONAI/MONAI](https://github.com/Project-MONAI/MONAI/pulls?q=is%3Apr+author%3ATalhax55z+is%3Amerged) | 4 | security hardening, `SegResNetDS` docs and tests |
 | [huggingface/transformers](https://github.com/huggingface/transformers/pull/49416) | 1 | MoE config bug |
 | [roboflow/supervision](https://github.com/roboflow/supervision/pull/2701) | 1 | COCO-compliant mAR metric |
@@ -32,7 +32,11 @@ I build computer vision and ML systems, and I fix the bugs I run into in the lib
 - **supervision [#2701](https://github.com/roboflow/supervision/pull/2701):** `MeanAverageRecall` capped detections across all classes, which pushed recall below what COCO's `pycocotools` reports. It now applies `maxDets` per image *and* per class.
 - **kornia [#5702](https://github.com/kornia/kornia/pull/5702):** `euler_from_quaternion` returned wrong rotations at pitch = ±π/2 (gimbal lock). Added the standard special case.
 - **kornia [#5710](https://github.com/kornia/kornia/pull/5710):** Canny's hysteresis loop lost its data dependence under `torch.jit.trace`.
-- **kornia [#5407](https://github.com/kornia/kornia/pull/5407), [#5417](https://github.com/kornia/kornia/pull/5417):** integer inputs overflowed or produced NaN/inf in `normalize`, `denormalize` and `mean_iou_bbox`. They are now promoted to float32.
+- **kornia [#5407](https://github.com/kornia/kornia/pull/5407), [#5417](https://github.com/kornia/kornia/pull/5417), [#6323](https://github.com/kornia/kornia/pull/6323):** integer inputs overflowed or produced NaN/inf in `normalize`, `denormalize` and `mean_iou_bbox` (now promoted to float32), and integer coordinates were promoted to the wrong dtype in keypoints and boxes.
+- **kornia [#6299](https://github.com/kornia/kornia/pull/6299):** `aepe`/`AEPE` returned NaN gradients at exact matches. They now return a zero gradient.
+- **kornia [#6300](https://github.com/kornia/kornia/pull/6300), [#6538](https://github.com/kornia/kornia/pull/6538):** `JPEGCodecDifferentiable` ONNX graphs now stay dynamic in height and width, and JPEG shapes work with dynamic `torch.export`.
+- **kornia [#6526](https://github.com/kornia/kornia/pull/6526), [#6531](https://github.com/kornia/kornia/pull/6531), [#6446](https://github.com/kornia/kornia/pull/6446), [#6407](https://github.com/kornia/kornia/pull/6407):** input validation: `fit_line` weights that are not `(B, N)`, unsupported transform shapes, `ScalePyramid` `extra_levels` below 1 and bad LAF-estimator shapes are now rejected up front.
+- **kornia [#6437](https://github.com/kornia/kornia/pull/6437), [#6438](https://github.com/kornia/kornia/pull/6438), [#6408](https://github.com/kornia/kornia/pull/6408):** API cleanup: abstract methods of `BaseWarper` and `BaseModel` are enforced, and unused or ignored arguments (`validate_boxes` in `crop_by_boxes`, `side` in `resize_to_be_divisible`) are deprecated.
 - **MONAI [#9179](https://github.com/Project-MONAI/MONAI/pull/9179):** the MMAR format carried a security advisory (unsafe dynamic imports and TorchScript loading). Deprecated the APIs and disabled `load_from_mmar`.
 - **MONAI [#8797](https://github.com/Project-MONAI/MONAI/pull/8797), [#9128](https://github.com/Project-MONAI/MONAI/pull/9128), [#9131](https://github.com/Project-MONAI/MONAI/pull/9131):** `SegResNetDS` documented only the isotropic input-shape rule. I traced `shape_factor()` and `is_valid_shape()` through the source, documented the anisotropic case, and added edge-case tests.
 - **transformers [#49416](https://github.com/huggingface/transformers/pull/49416):** `Inkling-Small` resolved `moe_intermediate_size` to 3072 instead of 2048 because the dense MLP width overwrote the expert width, breaking weight loading.
@@ -40,11 +44,24 @@ I build computer vision and ML systems, and I fix the bugs I run into in the lib
 **In review:** [huggingface/trl #7540](https://github.com/huggingface/trl/pull/7540) (report true epoch progress in `AsyncGRPOTrainer` and `AsyncDistillationTrainer`) · [MONAI #8795](https://github.com/Project-MONAI/MONAI/pull/8795) (package install hint in `ImageWriter` backend errors)
 
 <details>
-<summary><b>All 20 merged PRs</b></summary>
+<summary><b>All 33 merged PRs</b></summary>
 <br>
 
 | Repo | PR | Title |
 |---|---|---|
+| kornia/kornia | [#6674](https://github.com/kornia/kornia/pull/6674) | fix(enhance): keep image_histogram2d centers over range |
+| kornia/kornia | [#6538](https://github.com/kornia/kornia/pull/6538) | fix(enhance): support dynamic torch.export JPEG shapes |
+| kornia/kornia | [#6531](https://github.com/kornia/kornia/pull/6531) | fix(feature): validate input shapes in LAF estimators |
+| kornia/kornia | [#6526](https://github.com/kornia/kornia/pull/6526) | fix(geometry): reject fit_line weights whose shape is not (B, N) |
+| kornia/kornia | [#6446](https://github.com/kornia/kornia/pull/6446) | fix(geometry)!: reject unsupported transform input shapes |
+| kornia/kornia | [#6438](https://github.com/kornia/kornia/pull/6438) | fix(geometry): deprecate the unused validate_boxes argument of crop_by_boxes |
+| kornia/kornia | [#6437](https://github.com/kornia/kornia/pull/6437) | fix(geometry)!: enforce the abstract methods of BaseWarper and BaseModel |
+| kornia/kornia | [#6408](https://github.com/kornia/kornia/pull/6408) | fix(geometry): deprecate ignored resize_to_be_divisible side argument |
+| kornia/kornia | [#6407](https://github.com/kornia/kornia/pull/6407) | fix(geometry)!: reject ScalePyramid extra_levels below 1 |
+| kornia/kornia | [#6353](https://github.com/kornia/kornia/pull/6353) | test: run test_ransac.py on MPS again and remove the mps_process_abort skip |
+| kornia/kornia | [#6323](https://github.com/kornia/kornia/pull/6323) | Fix integer coordinate dtype promotion in keypoints and boxes |
+| kornia/kornia | [#6300](https://github.com/kornia/kornia/pull/6300) | fix(enhance): keep JPEGCodecDifferentiable ONNX graphs dynamic in height and width |
+| kornia/kornia | [#6299](https://github.com/kornia/kornia/pull/6299) | fix(metrics): return zero gradient instead of NaN in aepe/AEPE at exact matches |
 | kornia/kornia | [#6184](https://github.com/kornia/kornia/pull/6184) | Fix BoxFiltering class-list device mismatch in forward |
 | kornia/kornia | [#6139](https://github.com/kornia/kornia/pull/6139) | feat(onnx): add force_download to refresh cached models |
 | kornia/kornia | [#6138](https://github.com/kornia/kornia/pull/6138) | fix(augmentation): repeat CutMix parameters across video frames |
