@@ -1,13 +1,25 @@
-<h1 align="center">Muhammad Talha</h1>
+<div align="center">
 
-<p align="center">
-  Computer vision &amp; ML engineer &nbsp;·&nbsp; <b>33 merged pull requests</b> in Hugging Face, MONAI, Kornia and Roboflow<br>
-  BS Computer Science, AWKUM (2022–2026) &nbsp;·&nbsp; Mardan, Pakistan &nbsp;·&nbsp; <a href="mailto:muhammadtalha223@gmail.com">muhammadtalha223@gmail.com</a>
-</p>
+# Muhammad Talha
+
+### Computer Vision &amp; Machine Learning Engineer
+
+Building practical vision systems and improving the tools they depend on.
+
+[![Merged PRs](https://img.shields.io/badge/Merged%20PRs-33-2ea44f?style=for-the-badge&logo=github)](https://github.com/pulls?q=is%3Apr+author%3ATalhax55z+is%3Amerged)
+[![Kornia](https://img.shields.io/badge/Kornia-26%20merged-7b61ff?style=for-the-badge)](https://github.com/kornia/kornia/pulls?q=is%3Apr+author%3ATalhax55z+is%3Amerged)
+[![MONAI](https://img.shields.io/badge/MONAI-4%20merged-00a6a6?style=for-the-badge)](https://github.com/Project-MONAI/MONAI/pulls?q=is%3Apr+author%3ATalhax55z+is%3Amerged)
+[![Open PRs](https://img.shields.io/badge/Open%20PRs-2-blue?style=for-the-badge&logo=github)](https://github.com/pulls?q=is%3Apr+author%3ATalhax55z+is%3Aopen)
+
+**AWKUM · BS Computer Science, 2022–2026 · Mardan, Pakistan**
+
+[Email](mailto:muhammadtalha223@gmail.com) · [GitHub contributions](https://github.com/pulls?q=is%3Apr+author%3ATalhax55z)
+
+</div>
 
 ---
 
-## About
+## About me
 
 I build computer vision and ML systems, and I fix the bugs I run into in the libraries underneath them. My thesis was an end-to-end license plate recognition system for Pakistani plates that runs on a Raspberry Pi and is deployed entirely on free-tier services. Most of my open-source work is correctness fixes in PyTorch-ecosystem libraries: numerical edge cases, ONNX and `torch.export` compatibility, input validation, metric definitions, and security hardening.
 
